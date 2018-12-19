@@ -107,56 +107,56 @@ const Project = ({
   logo,
 }) => (
   <Card p={0}>
-    <Flex css={{ height: '200px' }}>
-      <TextContainer>
-        <span>
-          <Title my={2} pb={1}>
-            {name}
-          </Title>
-        </span>
-        <Text width="100%" css={{ overflow: 'auto' }}>
-          {description}
-        </Text>
-      </TextContainer>
-      <ImageContainer>
-        <ProjectImage src={logo.image.src} alt={logo.title} />
-        <ImageSubtitle bg="primaryLight" color="white" top="13px" top-s="-37px">
-          {type}
-        </ImageSubtitle>
-        <ImageSubtitle
-          bg="backgroundDark"
-          invert="true"
-          top-s="-200px"
-          top="-227px"
-        >
-          {publishedDate}
-        </ImageSubtitle>
-        <SocialLinksContainer>
-          <Label mx={1} fontSize={5}>
-            <SocialLink
-              color="primary"
-              hoverColor="primaryLight"
-              name="Check repository"
-              fontAwesomeIcon="github"
-              url={repositoryUrl}
-            />
-          </Label>
-          <Label mx={1} fontSize={5}>
-            <SocialLink
-              color="primary"
-              hoverColor="primaryLight"
-              fontSize={5}
-              mx={1}
-              name="See project"
-              fontAwesomeIcon="globe"
-              url={projectUrl}
-            />
-          </Label>
-        </SocialLinksContainer>
-      </ImageContainer>
-    </Flex>
-  </Card>
-);
+      <Flex css={{ height: '200px' }}>
+        <TextContainer>
+          <span>
+            <Title my={2} pb={1}>
+              {name}
+            </Title>
+          </span>
+          <Text width="100%" css={{ overflow: 'auto' }}>
+            {description}
+          </Text>
+        </TextContainer>
+        <ImageContainer>
+          <ProjectImage src={logo.image.src} alt={logo.title} />
+          <ImageSubtitle bg="primaryLight" color="white" top="13px" top-s="-37px">
+            {type}
+          </ImageSubtitle>
+          <ImageSubtitle
+            bg="backgroundDark"
+            invert="true"
+            top-s="-200px"
+            top="-227px"
+          >
+            {publishedDate}
+          </ImageSubtitle>
+          <SocialLinksContainer>
+            <Label mx={1} fontSize={5}>
+              <SocialLink
+                color="primary"
+                hoverColor="primaryLight"
+                name="Check repository"
+                fontAwesomeIcon="github"
+                url={repositoryUrl}
+              />
+            </Label>
+            <Label mx={1} fontSize={5}>
+              <SocialLink
+                color="primary"
+                hoverColor="primaryLight"
+                fontSize={5}
+                mx={1}
+                name="See project"
+                fontAwesomeIcon="globe"
+                url={projectUrl}
+              />
+            </Label>
+          </SocialLinksContainer>
+        </ImageContainer>
+      </Flex>
+    </Card>
+  );
 
 const Projects = () => (
   <Section.Container id="projects" Background={Background}>
