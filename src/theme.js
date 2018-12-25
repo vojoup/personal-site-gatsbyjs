@@ -1,14 +1,14 @@
 const colors = {
-  background: '#FFFFFF',
-  backgroundDark: '#f0e6f6',
+  background: '#f1f1f1',
+  backgroundDark: '#A071CE',
 
-  primary: '#7c37ad',
-  primaryLight: '#ae66df',
-  primaryDark: '#4b007d',
+  primary: '#007ACC',
+  primaryLight: '#F39237',
+  primaryDark: '#9E2422',
 
-  secondary: '#ff4081',
-  secondaryLight: '#ff79b0',
-  secondaryDark: '#c60055',
+  secondary: '#DBD3AD',
+  secondaryLight: '#DBD3AD',
+  secondaryDark: '#3E442B',
 };
 
 module.exports = {
