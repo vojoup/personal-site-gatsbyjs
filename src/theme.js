@@ -1,13 +1,13 @@
 const colors = {
   background: '#f1f1f1',
-  backgroundDark: '#A071CE',
+  backgroundDark: '#E5E5E5',
 
   primary: '#007ACC',
-  primaryLight: '#F39237',
-  primaryDark: '#9E2422',
+  primaryLight: '#C8A1E0',
+  primaryDark: '#E5B8B7',
 
-  secondary: '#DBD3AD',
-  secondaryLight: '#DBD3AD',
+  secondary: '#C8A1E0',
+  secondaryLight: '#A071CE',
   secondaryDark: '#3E442B',
 };
 
