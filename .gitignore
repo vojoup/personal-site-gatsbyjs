@@ -68,3 +68,6 @@ netlify.toml
 
 # mac FS
 .DS_Store
+
+# Contentful errors
+contentful-import-error-log-*.json
