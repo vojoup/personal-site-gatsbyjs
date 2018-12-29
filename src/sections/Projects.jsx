@@ -128,15 +128,17 @@ const Project = ({
             url={repositoryUrl}
           />
           {' '}
-          <SocialLink
-            color="primary"
-            hoverColor="primaryLight"
-            fontSize={5}
-            mx={1}
-            name="See project"
-            fontAwesomeIcon="globe"
-            url={projectUrl}
-          />
+          {projectUrl && (
+            <SocialLink
+              color="primary"
+              hoverColor="primaryLight"
+              fontSize={5}
+              mx={1}
+              name="See project"
+              fontAwesomeIcon="globe"
+              url={projectUrl}
+            />
+          )}
         </ImageSubtitle>
         <SocialLinksContainer>
           {type}
