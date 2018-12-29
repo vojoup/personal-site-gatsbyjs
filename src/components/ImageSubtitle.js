@@ -7,7 +7,7 @@ const ImageSubtitle = styled(Text)`
   top: ${props => props.top};
   left: 0;
   padding: 10px;
-  font-size: 14px;
+  font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
   top: ${props => props.top};

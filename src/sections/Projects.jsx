@@ -88,12 +88,12 @@ const SocialLinksContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   position: relative;
-  float: right;
   padding: 2px;
-  top: -220px;
+  top: -200px;
+  border-bottom: 2px solid ${props => props.theme.colors.primary};
 
   @media (min-width: 400px) {
-    top: -237px;
+    top: -202px;
   }
 `;
 
@@ -103,60 +103,50 @@ const Project = ({
   projectUrl,
   repositoryUrl,
   type,
-  publishedDate,
   logo,
-}) => (
+}) => console.log(projectUrl) || (
   <Card p={0}>
-      <Flex css={{ height: '200px' }}>
-        <TextContainer>
-          <span>
-            <Title my={2} pb={1}>
-              {name}
-            </Title>
-          </span>
-          <Text width="100%" css={{ overflow: 'auto' }}>
-            {description}
-          </Text>
-        </TextContainer>
-        <ImageContainer>
-          <ProjectImage src={logo.image.src} alt={logo.title} />
-          <ImageSubtitle bg="primaryLight" color="white" top="13px" top-s="-37px">
-            {type}
-          </ImageSubtitle>
-          <ImageSubtitle
-            bg="backgroundDark"
-            invert="true"
-            top-s="-200px"
-            top="-227px"
-          >
-            {publishedDate}
-          </ImageSubtitle>
-          <SocialLinksContainer>
-            <Label mx={1} fontSize={5}>
-              <SocialLink
-                color="primary"
-                hoverColor="primaryLight"
-                name="Check repository"
-                fontAwesomeIcon="github"
-                url={repositoryUrl}
-              />
-            </Label>
-            <Label mx={1} fontSize={5}>
-              <SocialLink
-                color="primary"
-                hoverColor="primaryLight"
-                fontSize={5}
-                mx={1}
-                name="See project"
-                fontAwesomeIcon="globe"
-                url={projectUrl}
-              />
-            </Label>
-          </SocialLinksContainer>
-        </ImageContainer>
-      </Flex>
-    </Card>
-  );
+    <Flex css={{ height: '200px' }}>
+      <TextContainer>
+        <span>
+          <Title my={2} pb={1}>
+            {name}
+          </Title>
+        </span>
+        <Text width="100%" css={{ overflow: 'auto' }}>
+          {description}
+        </Text>
+      </TextContainer>
+      <ImageContainer>
+        <ProjectImage src={logo.image.src} alt={logo.title} />
+        <ImageSubtitle bg="primaryLight" color="white" top="13px" top-s="-37px">
+          <SocialLink
+            color="primary"
+            hoverColor="primaryLight"
+            name="Check repository"
+            fontAwesomeIcon="github"
+            url={repositoryUrl}
+          />
+          {' '}
+          {projectUrl && (
+            <SocialLink
+              color="primary"
+              hoverColor="primaryLight"
+              fontSize={5}
+              mx={1}
+              name="See project"
+              fontAwesomeIcon="globe"
+              url={projectUrl}
+            />
+          )}
+        </ImageSubtitle>
+        <SocialLinksContainer>
+          {type}
+        </SocialLinksContainer>
+      </ImageContainer>
+    </Flex>
+  </Card>
+);
 
 const Projects = () => (
   <Section.Container id="projects" Background={Background}>
@@ -171,7 +161,6 @@ const Projects = () => (
               description
               projectUrl
               repositoryUrl
-              publishedDate(formatString: "YYYY")
               type
               logo {
                 title
