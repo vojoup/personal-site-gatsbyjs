@@ -33,7 +33,7 @@ const Success = () => (
   <Layout>
     <Section.Container id="404" Background={Background} css={{ padding: 0 }}>
       <Box w={[320, 400, 600]} m="auto">
-        <Heading color="primaryDark" fontSize={['9rem', '13rem', '16rem']}>
+        <Heading color="primaryDark" fontSize={['2rem', '5rem', '8rem']}>
           Thanks for contacting me!
         </Heading>
       </Box>
